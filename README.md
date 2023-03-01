@@ -31,6 +31,11 @@ Note: In the gif I show that data is persistent by both restarting the app throu
 
 ![Kapture 2023-02-25 at 16 16 49](https://user-images.githubusercontent.com/66531257/221380014-054c7335-7240-4e93-8e18-2fc533411511.gif)
 
+New GIF showing scrollable list:
+
+![Kapture 2023-03-01 at 08 05 47](https://user-images.githubusercontent.com/66531257/222147852-7738fb01-c35a-40b6-9c11-e39ce493e11f.gif)
+
+
 GIF created with [Kap](https://getkap.co/) for macOS.
 
 ## Notes
