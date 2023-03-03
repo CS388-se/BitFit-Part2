@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 private const val TAG = "DetailActivity"
 
 @Suppress("DEPRECATION")
-class DetailActivity : AppCompatActivity() {
+class DetailActivity() : AppCompatActivity() {
     private lateinit var foodTextView: EditText
     private lateinit var caloriesTextView: EditText
     private lateinit var recordFoodBtn: Button
