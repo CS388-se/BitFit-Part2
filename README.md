@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-
+![Kapture 2023-03-03 at 15 20 43](https://user-images.githubusercontent.com/66531257/222821099-6177c37d-12f3-4d71-89b7-ce6aa1a14365.gif)
 
 GIF created with [Kap](https://getkap.co/) for macOS.
 
