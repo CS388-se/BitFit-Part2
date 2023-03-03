@@ -27,6 +27,11 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [Kap](https://getkap.co/) for macOS.
 
+### More screenshots to prove requirements:
+- Here I just wanted to show the 2 Fragments: `DashboardFragment` and `FoodListFragment`
+
+![Screenshot 2023-03-03 at 3 22 57 PM](https://user-images.githubusercontent.com/66531257/222821407-85184289-c055-4e1d-b52b-6dd98c828edd.png)
+
 ## Notes
 
 The biggest challenge was getting the list of data on the dashboard fragment; I later realized that I just need to query the database and used the `getAll` method to retreive all the items.
