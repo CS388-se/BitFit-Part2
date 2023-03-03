@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -16,6 +17,7 @@ class DashboardFragment(application: Application) : Fragment() {
     private lateinit var avgCalVal: TextView
     private lateinit var maxCalVal: TextView
     private lateinit var minCalVal: TextView
+    private lateinit var clearDataBtn: Button
     private lateinit var application: Application
 
     init {
@@ -33,6 +35,14 @@ class DashboardFragment(application: Application) : Fragment() {
         avgCalVal = view.findViewById(R.id.avgCalVal)
         maxCalVal = view.findViewById(R.id.maxCalVal)
         minCalVal = view.findViewById(R.id.minCalVal)
+        clearDataBtn = view.findViewById(R.id.clearDataBtn)
+
+        clearDataBtn.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.IO) {
+                (application as FoodApplication).db.foodDao().deleteAll()
+            }
+            reset()
+        }
 
         lifecycleScope.launch(Dispatchers.IO) {
             (application as FoodApplication).db.foodDao().getAll().collect { databaseList ->
@@ -49,11 +59,15 @@ class DashboardFragment(application: Application) : Fragment() {
         return view
     }
 
+    fun reset() {
+        avgCalVal.text = "---"
+        maxCalVal.text = "---"
+        minCalVal.text = "---"
+    }
+
     fun update(foods: List<DisplayFood>) {
         if (foods.isEmpty()) {
-            avgCalVal.text = "---"
-            maxCalVal.text = "---"
-            minCalVal.text = "---"
+            reset()
             return
         }
 
